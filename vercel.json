@@ -1,4 +1,8 @@
 {
+  "buildCommand": null,
+  "outputDirectory": "public",
+  "installCommand": null,
+  "framework": null,
   "rewrites": [
     { "source": "/admin.html", "destination": "/404.html" },
     { "source": "/src/admin.html", "destination": "/404.html" },
