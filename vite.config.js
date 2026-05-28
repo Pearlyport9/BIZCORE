@@ -1,24 +1,21 @@
-import { defineConfig } from "vite";
-import tailwindcss from "@tailwindcss/vite";
 import { resolve } from "path";
+import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
-  root: "src",
-  publicDir: "../public",
+export default {
   plugins: [tailwindcss()],
   build: {
-    outDir: "../dist",
+    outDir: "dist",
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        index: resolve(__dirname, "src/index.html"),
-        services: resolve(__dirname, "src/services.html"),
-        about: resolve(__dirname, "src/about.html"),
-        blog: resolve(__dirname, "src/blog.html"),
-        "blog-post": resolve(__dirname, "src/blog-post.html"),
-        contact: resolve(__dirname, "src/contact.html"),
-        "case-studies": resolve(__dirname, "src/case-studies.html"),
-      },
-    },
-  },
-});
+        index: resolve(__dirname, "index.html"),
+        services: resolve(__dirname, "services.html"),
+        about: resolve(__dirname, "about.html"),
+        blog: resolve(__dirname, "blog.html"),
+        "blog-post": resolve(__dirname, "blog-post.html"),
+        contact: resolve(__dirname, "contact.html"),
+        "case-studies": resolve(__dirname, "case-studies.html")
+      }
+    }
+  }
+};
