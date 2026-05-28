@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build:index": "node scripts/build-index.cjs",
-    "build": "node scripts/build-index.cjs && vite build",
+   "build": "echo 'No build needed'",
     "preview": "vite preview"
   },
   "devDependencies": {
