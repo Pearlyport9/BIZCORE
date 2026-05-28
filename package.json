@@ -1,0 +1,23 @@
+{
+  "name": "bizcore-consulting",
+  "version": "1.0.0",
+  "description": "BIZCORE Consulting — Structured Finance. Sustainable Growth.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:index": "node scripts/build-index.cjs",
+    "build": "node scripts/build-index.cjs && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "tailwindcss": "^4.1.4",
+    "vite": "^6.3.2"
+  },
+  "dependencies": {
+    "@phosphor-icons/web": "^2.1.2",
+    "marked": "^18.0.4",
+    "phosphor-icons": "^1.4.2"
+  }
+}
