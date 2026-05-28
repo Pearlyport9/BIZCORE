@@ -4,13 +4,12 @@
   "description": "BIZCORE Consulting - Structured Finance. Sustainable Growth.",
   "private": true,
   "type": "module",
- "scripts": {
-  "dev": "vite",
-  "build:index": "node scripts/build-index.cjs",
-  "build": "vite build",
-  "preview": "vite preview"
-},
-  
+  "scripts": {
+    "dev": "vite",
+    "build:index": "node scripts/build-index.cjs",
+    "build": "node scripts/build-index.cjs && vite build",
+    "preview": "vite preview"
+  },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.4",
     "tailwindcss": "^4.1.4",
