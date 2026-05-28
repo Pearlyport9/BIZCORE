@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post | BIZCORE Consulting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@400;500;600&family=DM+Sans:wght@400;500&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/skeleton.css" rel="stylesheet" />
+</head>
+<body style="opacity:0;">
+
+<div id="skeleton-loader">
+  <div class="sk-block sk-nav"></div>
+  <div class="sk-block sk-hero"></div>
+  <div class="sk-content">
+    <div class="sk-row">
+      <div class="sk-block"></div>
+      <div class="sk-block"></div>
+      <div class="sk-block"></div>
+    </div>
+    <div class="sk-row-2">
+      <div class="sk-block sk-wide"></div>
+      <div class="sk-block"></div>
+    </div>
+  </div>
+</div>
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-brand-navy/95 backdrop-blur-sm border-b border-white/10">
+    <div class="max-w-content mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-display text-2xl font-bold text-white tracking-tight">BIZCORE</a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="nav-link text-sm uppercase tracking-wider transition-colors duration-200 pb-1">Home</a>
+        <a href="services.html" class="nav-link text-sm uppercase tracking-wider transition-colors duration-200 pb-1">Services</a>
+        <a href="about.html" class="nav-link text-sm uppercase tracking-wider transition-colors duration-200 pb-1">About</a>
+        <a href="blog.html" class="nav-link text-sm uppercase tracking-wider transition-colors duration-200 pb-1">Blog</a>
+        <a href="contact.html" class="nav-link text-sm uppercase tracking-wider transition-colors duration-200 pb-1">Contact</a>
+        <a href="contact.html" class="btn-primary !py-2.5 !px-6">Book a Consultation</a>
+      </div>
+      <button id="hamburger-btn" class="lg:hidden text-white p-2" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-navy z-40 translate-x-full transition-transform duration-300 lg:hidden">
+      <div class="flex flex-col items-center justify-center h-full gap-8 text-lg">
+        <a href="index.html" class="text-white/80 hover:text-brand-gold transition-colors">Home</a>
+        <a href="services.html" class="text-white/80 hover:text-brand-gold transition-colors">Services</a>
+        <a href="about.html" class="text-white/80 hover:text-brand-gold transition-colors">About</a>
+        <a href="blog.html" class="text-white/80 hover:text-brand-gold transition-colors">Blog</a>
+        <a href="contact.html" class="text-white/80 hover:text-brand-gold transition-colors">Contact</a>
+        <a href="contact.html" class="btn-primary mt-4">Book a Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-16">
+    <article id="post-content" class="max-w-text mx-auto px-6 py-12">
+      <div id="post-loading" class="text-center py-20">
+        <p class="text-brand-muted">Loading post...</p>
+      </div>
+
+      <div id="post-body" class="hidden">
+        <a href="blog.html" class="inline-flex items-center gap-2 text-brand-muted hover:text-brand-gold text-sm transition-colors mb-8">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Insights
+        </a>
+
+        <span id="post-category" class="badge badge-gold mb-4 inline-block"></span>
+        <h1 id="post-title" class="font-heading text-3xl md:text-4xl font-semibold text-brand-navy leading-tight mb-4"></h1>
+
+        <div class="flex items-center gap-3 text-sm text-brand-muted mb-8">
+          <span id="post-author"></span>
+          <span>&middot;</span>
+          <span id="post-date"></span>
+          <span>&middot;</span>
+          <span id="post-read-time"></span>
+        </div>
+
+        <div id="post-thumbnail" class="aspect-[16/9] bg-brand-charcoal rounded-2xl overflow-hidden mb-10 hidden">
+          <img id="post-thumbnail-img" class="w-full h-full object-cover" alt="" />
+        </div>
+
+        <div id="post-content-body" class="prose max-w-none"></div>
+
+        <!-- Mid-article CTA -->
+        <div class="bg-brand-navy rounded-2xl p-8 my-12 text-center reveal">
+          <p class="font-heading text-xl font-semibold text-white mb-2">Need help with your financials?</p>
+          <a href="contact.html" class="btn-primary inline-block mt-3">Book a Free Call →</a>
+        </div>
+
+        <!-- Author Bio -->
+        <div id="author-bio" class="flex items-start gap-5 p-6 bg-brand-bg rounded-2xl mb-12 reveal">
+          <div class="w-14 h-14 rounded-full bg-brand-charcoal shrink-0 overflow-hidden">
+            <img id="author-avatar" class="w-full h-full object-cover" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div>
+            <p id="author-name" class="font-heading font-semibold text-brand-navy"></p>
+            <p id="author-bio-text" class="text-sm text-brand-muted mt-1"></p>
+          </div>
+        </div>
+
+        <!-- Related Posts -->
+        <div id="related-posts" class="mb-12 reveal">
+          <h3 class="font-heading text-2xl font-semibold text-brand-navy mb-6">You Might Also Like</h3>
+          <div id="related-grid" class="grid md:grid-cols-3 gap-6"></div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="bg-brand-navy rounded-2xl p-10 text-center reveal">
+          <h3 class="font-display text-2xl font-bold text-white mb-3">Found This Useful? Let's Work Together.</h3>
+          <p class="text-white/60 mb-6">Book a free discovery call with BIZCORE today.</p>
+          <a href="contact.html" class="btn-primary">Book a Consultation</a>
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="blog.html" class="inline-flex items-center gap-2 text-brand-muted hover:text-brand-gold text-sm transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Insights
+          </a>
+        </div>
+      </div>
+
+      <div id="post-404" class="hidden text-center py-20">
+        <i data-lucide="file-x" class="w-16 h-16 text-brand-muted/40 mx-auto mb-4"></i>
+        <h2 class="font-heading text-2xl font-semibold text-brand-navy mb-2">Post Not Found</h2>
+        <p class="text-brand-muted mb-6">The post you're looking for doesn't exist or has been removed.</p>
+        <a href="blog.html" class="btn-primary inline-block">Back to Blog</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-charcoal text-white py-16 px-6">
+    <div class="container-content">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <a href="index.html" class="font-display text-2xl font-bold text-white tracking-tight">BIZCORE</a>
+        </div>
+        <div>
+          <h4 class="font-heading text-sm font-semibold uppercase tracking-wider text-brand-gold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-white/60 hover:text-brand-gold text-sm transition-colors">Home</a></li>
+            <li><a href="services.html" class="text-white/60 hover:text-brand-gold text-sm transition-colors">Services</a></li>
+            <li><a href="about.html" class="text-white/60 hover:text-brand-gold text-sm transition-colors">About</a></li>
+            <li><a href="blog.html" class="text-white/60 hover:text-brand-gold text-sm transition-colors">Blog</a></li>
+            <li><a href="contact.html" class="text-white/60 hover:text-brand-gold text-sm transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading text-sm font-semibold uppercase tracking-wider text-brand-gold mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><span class="text-white/60 text-sm">Financial Planning</span></li>
+            <li><span class="text-white/60 text-sm">Market Research</span></li>
+            <li><span class="text-white/60 text-sm">Data Analytics</span></li>
+            <li><span class="text-white/60 text-sm">Investment Advisory</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading text-sm font-semibold uppercase tracking-wider text-brand-gold mb-4">Connect</h4>
+          <div class="flex gap-4">
+            <a href="#" class="footer-social-icon" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5 text-white/80"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="Twitter"><i data-lucide="twitter" class="w-5 h-5 text-white/80"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5 text-white/80"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="WhatsApp"><i data-lucide="message-circle" class="w-5 h-5 text-white/80"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-8 text-center">
+        <p class="text-white/40 text-sm">&copy; 2026 BIZCORE Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/skeleton.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    lucide.createIcons();
+
+    const BLOG_KEY = 'bizcore_blog_posts';
+
+    function getPosts() {
+      try { return JSON.parse(localStorage.getItem(BLOG_KEY)) || []; } catch { return []; }
+    }
+
+    function getReadTime(content) {
+      const words = content ? content.replace(/<[^>]*>/g, '').split(/\s+/).length : 0;
+      return Math.max(1, Math.ceil(words / 200)) + ' min read';
+    }
+
+    function loadPost() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const posts = getPosts();
+      const post = posts.find(p => p.id === id);
+
+      if (!post || !post.published) {
+        document.getElementById('post-loading').classList.add('hidden');
+        document.getElementById('post-404').classList.remove('hidden');
+        document.title = 'Post Not Found | BIZCORE Consulting';
+        return;
+      }
+
+      document.title = `${post.title} | BIZCORE Consulting`;
+
+      // Dynamic SEO meta
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.content = (post.excerpt || '').substring(0, 155);
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.content = post.title;
+
+      document.getElementById('post-loading').classList.add('hidden');
+      document.getElementById('post-body').classList.remove('hidden');
+      document.getElementById('post-category').textContent = post.category;
+      document.getElementById('post-title').textContent = post.title;
+      document.getElementById('post-author').textContent = post.author || 'BIZCORE';
+      document.getElementById('post-date').textContent = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      document.getElementById('post-read-time').textContent = getReadTime(post.content || post.excerpt);
+
+      if (post.thumbnail) {
+        const thumbEl = document.getElementById('post-thumbnail');
+        thumbEl.classList.remove('hidden');
+        document.getElementById('post-thumbnail-img').src = post.thumbnail;
+        document.getElementById('post-thumbnail-img').alt = post.title;
+      }
+
+      document.getElementById('post-content-body').innerHTML = post.content || post.excerpt || '';
+
+      // Author bio
+      document.getElementById('author-name').textContent = post.author || 'BIZCORE Consulting';
+      document.getElementById('author-bio-text').textContent = `${post.author || 'BIZCORE'} is a trusted advisor in ${post.category.toLowerCase()}.`;
+
+      // Related posts
+      const related = posts.filter(p => p.id !== id && p.category === post.category && p.published).slice(0, 3);
+      const relatedGrid = document.getElementById('related-grid');
+      if (related.length === 0) {
+        document.getElementById('related-posts').classList.add('hidden');
+      } else {
+        relatedGrid.innerHTML = related.map(p => `
+          <a href="blog-post.html?id=${p.id}" class="card !p-0 overflow-hidden group">
+            <div class="aspect-[16/9] bg-brand-charcoal overflow-hidden">
+              <img src="${p.thumbnail || 'assets/images/blog-placeholder.jpg'}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="p-5">
+              <span class="badge badge-gold mb-2 inline-block text-xs">${p.category}</span>
+              <h4 class="font-heading font-semibold text-brand-navy text-sm group-hover:text-brand-gold transition-colors">${p.title}</h4>
+            </div>
+          </a>
+        `).join('');
+      }
+    }
+
+    loadPost();
+  </script>
+</body>
+</html>
