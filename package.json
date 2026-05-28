@@ -1,7 +1,7 @@
 {
   "name": "bizcore-consulting",
   "version": "1.0.0",
-  "description": "BIZCORE Consulting — Structured Finance. Sustainable Growth.",
+  "description": "BIZCORE Consulting - Structured Finance. Sustainable Growth.",
   "private": true,
   "type": "module",
  "scripts": {
